@@ -1,0 +1,19 @@
+{
+    "name": "channel9",
+    "source": "D:\\BaiduNetdiskDownload\\video\\output_9.mp4",
+    "model": "..\\yolov8s.pt",
+    "device": "cpu",
+    "lines": [
+        508, 219, 497, 370, 853, 375, 863, 235
+    ],
+    "debugPath": ".\\debug_9.mp4",
+    "debugShow": true,
+    "detectFps": 8,
+    "db": {
+        "url": "http://127.0.0.1:8086",
+        "token": "KY128b1hkD2lQi0kUe-3qptFWaouLFp5lBeH1jTQrpH34vi0ru1u85o9IeQR-AjPaYc27KjuK64P3Ra9KQjNNQ==",
+        "org": "jd",
+        "bucket": "crowd_counting",
+        "measurement": "crowd_count"
+    }
+}

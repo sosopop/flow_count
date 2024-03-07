@@ -1,0 +1,15 @@
+{
+    "name": "channel8",
+    "source": "D:\\BaiduNetdiskDownload\\video\\output_8.mp4",
+    "device": "cpu",
+    "lines": [
+        426, 0, 426, 152, 300, 190, 300, 328, 574, 418, 1037, 407, 1055, 217
+    ],
+    "db": {
+        "url": "http://127.0.0.1:8086",
+        "token": "KY128b1hkD2lQi0kUe-3qptFWaouLFp5lBeH1jTQrpH34vi0ru1u85o9IeQR-AjPaYc27KjuK64P3Ra9KQjNNQ==",
+        "org": "jd",
+        "bucket": "crowd_counting",
+        "measurement": "crowd_count"
+    }
+}

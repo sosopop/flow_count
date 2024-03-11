@@ -4,12 +4,12 @@ import os
 import time
 import sys
 from pathlib import Path
-from crowd_count import CrowdCount
+from flow_count import FlowCount
 
-def slave_main(config_file):
+def slave_main(config_file, debug):
     print(f"以配置文件 {config_file} 运行slave进程")
-    crowd_counter = CrowdCount(config_file)
-    crowd_counter.run()
+    flow_count = FlowCount(config_file, debug)
+    flow_count.run()
 
 def start_slave_process(config_file):
     return multiprocessing.Process(target=slave_main, args=(config_file,))
@@ -47,6 +47,7 @@ def main():
     parser = argparse.ArgumentParser(description="启动master或slave进程。")
     parser.add_argument("--mode", choices=["master", "slave"], default="master", help="运行模式")
     parser.add_argument("--config", help="对于slave模式，需要指定配置文件路径；对于master模式，需要指定配置文件目录路径。")
+    parser.add_argument("--debug", help="启用调试模式。")
     args = parser.parse_args()
 
     if args.mode == "master":
@@ -58,7 +59,7 @@ def main():
         if not args.config or not Path(args.config).is_file():
             print("错误：Slave模式需要指定配置文件路径。")
             sys.exit(1)
-        slave_main(args.config)
+        slave_main(args.config, args.debug)
     else:
         print("错误：无效的模式或配置。")
         sys.exit(1)

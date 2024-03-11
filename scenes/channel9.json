@@ -1,6 +1,7 @@
 {
     "name": "channel9",
     "source": "D:\\BaiduNetdiskDownload\\video\\output_9.mp4",
+    "model": "D:\\code\\flow_count\\models\\yolov8s_best_20240308_train38_specific.pt",
     "device": "cpu",
     "target": [
         235, 172, 994, 546
@@ -8,11 +9,13 @@
     "lines": [
         650, 0, 650, 100, 700, 550, 1280, 550
     ],
+    "savePath": ".\\video\\channel9",
+    "debug": true,
+    "frameSkip": 3,
     "db": {
         "url": "http://127.0.0.1:8086",
         "token": "KY128b1hkD2lQi0kUe-3qptFWaouLFp5lBeH1jTQrpH34vi0ru1u85o9IeQR-AjPaYc27KjuK64P3Ra9KQjNNQ==",
         "org": "jd",
-        "bucket": "crowd_counting",
-        "measurement": "crowd_count"
+        "bucket": "crowd_counting"
     }
 }

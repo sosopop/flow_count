@@ -101,8 +101,8 @@ class FlowCount:
 
             # 更新当前帧数并打印进度
             progress = current_frame / self.read_fps
-            if self.debug:
-                print(f"FlowCount.loop: 当前进度 {progress:.2f} s", end="\r")
+            # if self.debug:
+                # print(f"FlowCount.loop: 当前进度 {progress:.2f} s", end="\r")
 
         # 释放资源
         cap.release()

@@ -4,13 +4,13 @@
     "model": "D:\\code\\flow_count\\models\\yolov8s_best_20240308_train38_specific.pt",
     "device": "cpu",
     "target": [
-        235, 172, 994, 546
+        211, 86, 1179, 634
     ],
     "lines": [
-        650, 0, 650, 100, 700, 550, 1280, 550
+        508, 219, 497, 370, 853, 375, 863, 235
     ],
     "savePath": "rtmp://127.0.0.1:1935/live/debug9",
-    "showWindow": true,
+    "showWindow": false,
     "debug": true,
     "frameSkip": 3,
     "db": {

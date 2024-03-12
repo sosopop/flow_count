@@ -1,6 +1,6 @@
 {
     "name": "channel9",
-    "source": "D:\\BaiduNetdiskDownload\\video\\output_9.mp4",
+    "source": "rtmp://127.0.0.1:1935/live/channel9",
     "model": "D:\\code\\flow_count\\models\\yolov8s_best_20240308_train38_specific.pt",
     "device": "cpu",
     "target": [
@@ -9,7 +9,8 @@
     "lines": [
         650, 0, 650, 100, 700, 550, 1280, 550
     ],
-    "savePath": ".\\video\\channel9",
+    "savePath": "rtmp://127.0.0.1:1935/live/debug9",
+    "showWindow": true,
     "debug": true,
     "frameSkip": 3,
     "db": {

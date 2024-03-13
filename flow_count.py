@@ -131,7 +131,7 @@ class FlowCount:
             classes=0, 
             tracker="bytetrack.yaml", 
             persist=True, 
-            frame_rate=self.write_fps)
+            frame_rate=self.write_fps, device=self.device)
         
         if self.target_area and self.debug:
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 1)

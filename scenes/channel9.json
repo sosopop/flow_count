@@ -1,7 +1,7 @@
 {
     "name": "channel9",
     "source": "rtmp://127.0.0.1:1935/live/channel9",
-    "model": "D:\\code\\flow_count\\models\\yolov8s_best_20240308_train38_specific.pt",
+    "model": ".\\models\\yolov8s_best_20240313_train44_specific.pt",
     "device": "cpu",
     "target": [
         211, 86, 1179, 634

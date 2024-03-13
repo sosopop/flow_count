@@ -25,6 +25,7 @@ class FlowCount:
         self.lines = self.config["lines"]
         self.show_window = self.config["showWindow"] if "showWindow" in self.config else False
         self.debug = self.config["debug"] if "debug" in self.config else False
+        self.device = self.config["device"] if "device" in self.config else "cpu"
         self.in_count = 0
         self.out_count = 0
         self.cross_render = 0
@@ -92,10 +93,8 @@ class FlowCount:
             if current_frame % sample_interval == 0:
                 if not self.__detect(frame):
                     break
-                if not self.__show(frame):
-                    break
-                if not self.__save(frame):
-                    break
+                self.__show(frame)
+                self.__save(frame)
 
             current_frame += 1
 

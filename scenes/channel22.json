@@ -1,7 +1,7 @@
 {
     "name": "channel22",
     "source": "rtmp://127.0.0.1:1935/live/channel22",
-    "model": "D:\\code\\flow_count\\models\\yolov8s_best_20240301_train17_specific.pt",
+    "model": ".\\models\\yolov8s_best_20240313_train44_specific.pt",
     "device": "cpu",
     "lines": [
         650, 0, 650, 100, 700, 550, 1280, 550

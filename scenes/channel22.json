@@ -7,6 +7,8 @@
         650, 0, 650, 100, 700, 550, 1280, 550
     ],
     "savePath": "rtmp://127.0.0.1:1935/live/debug22",
+    "saveCodec": "intel",
+    "ffmpegVerbose": false,
     "showWindow": false,
     "debug": true,
     "frameSkip": 3,

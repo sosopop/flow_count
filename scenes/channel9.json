@@ -10,6 +10,8 @@
         508, 219, 497, 370, 853, 375, 863, 235
     ],
     "savePath": "rtmp://127.0.0.1:1935/live/debug9",
+    "saveCodec": "intel",
+    "ffmpegVerbose": false,
     "showWindow": false,
     "debug": true,
     "frameSkip": 3,

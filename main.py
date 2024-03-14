@@ -11,7 +11,6 @@ def slave_main(config_file):
     flow_count.run()
 
 def start_slave_thread(config_file):
-    time.sleep(5)
     return threading.Thread(target=slave_main, args=(config_file,))
 
 def master_main(config_dir):
@@ -24,6 +23,7 @@ def master_main(config_dir):
         t = start_slave_thread(config_file)
         t.start()
         slaves[t.ident] = (t, config_file)
+        time.sleep(5)
 
     print("running ...")
     for t, _ in slaves.values():

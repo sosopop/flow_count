@@ -14,12 +14,16 @@ from utils import intersection_angle, color_palette
 class FlowCount:
     def __init__(self, config_file):
         self.config_file = config_file
-        self.config = json.load(open(config_file))
+        with open(config_file, 'r') as f:
+            self.config = json.load(f)
+        print(json.dumps(self.config, indent=4))
+        
         self.target_area = self.config["target"] if "target" in self.config else None
-        self.model_path = self.config["model"] if "model" in self.config else None
-        self.source_url = self.config["source"] if "source" in self.config else None
-        self.frame_skip = self.config["frameSkip"] if "frameSkip" in self.config else None
-        self.save_path = self.config["savePath"] if "savePath" in self.config else None
+        self.model_path = self.config["model"] if "model" in self.config else ""
+        self.source_url = self.config["source"] if "source" in self.config else ""
+        self.frame_skip = self.config["frameSkip"] if "frameSkip" in self.config else 1
+        self.save_path = self.config["savePath"] if "savePath" in self.config else ""
+        self.save_codec = self.config["saveCodec"] if "saveCodec" in self.config else "self"
         self.save_thread = None
         self.display_thread = None
         self.lines = self.config["lines"]
@@ -81,7 +85,7 @@ class FlowCount:
             self.save_thread = SaveThread(
                 self.save_path, self.write_fps,
                 self.frame_width, self.frame_height, 
-                max_queue_size=10)
+                self.save_codec, max_queue_size=10)
             self.save_thread.start()
 
         while cap.isOpened():
